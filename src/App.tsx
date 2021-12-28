@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+import { ThemeProvider } from 'theme-ui'
+import { defaultTheme } from './ui/theme'
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
+    <ThemeProvider theme={defaultTheme}>
       // Add Project main content
-    </div>
+    </ThemeProvider>
   );
 }
 
-export default App;
+export default App
