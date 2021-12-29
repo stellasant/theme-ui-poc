@@ -10,17 +10,17 @@ import { Theme } from 'theme-ui'
 // Replace them with
 
 const colors = {
-    primary: '#3A8DF4',
-    secondary: '#f5f5f5',
-    tertiary: '#fff',
-    text: '#000',
-    background: '#fff',
-    muted: '#a1a1a1',
+    primary: '#0ECC7E',
+    secondary: '#00C6D1',
+    tertiary: '#102532',
+    text: '#222222',
+    background: '#FFFFFF',
+    muted: '#A1A1A1',
 } as const
 
 const fonts = {
-    body: 'system-ui, sans-serif',
-    heading: '"Avenir Next", sans-serif',
+    body: '"Red Hat Text", sans-serif',
+    heading: '"Red Hat Display", sans-serif',
     monospace: 'Menlo, monospace',
 } as const
 
@@ -37,9 +37,35 @@ const lineHeights = {
     heading: 1.125,
 } as const
 
+const radii = {
+    sm: '12px',
+    md: '24px'
+}
+
 const shadows = {
     small: '0 0 4px rgba(0, 0, 0, .125)',
     large: '0 0 24px rgba(0, 0, 0, .125)',
+}
+
+const buttons = {
+    variant: {
+        primary: {
+            backgroundColor: 'primary',
+        },
+        secondary: {
+            color: 'background',
+            backgroundColor: 'secondary',
+        },
+        ghost: {
+            color: 'muted',
+            backgroundColor: 'background',
+        },
+    },
+    size: {
+        sm: '100px',
+        md: '200px',
+    }
+
 }
 
 // Global styles
@@ -125,5 +151,7 @@ export const defaultTheme: Theme = {
     fontWeights,
     lineHeights,
     shadows,
+    radii,
     styles,
+    buttons
 }
