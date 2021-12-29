@@ -6,6 +6,7 @@ https://theme-ui.com/theming
 * */
 
 import { Theme } from 'theme-ui'
+import { darken } from 'polished'
 
 // Replace them with
 
@@ -48,24 +49,33 @@ const shadows = {
 }
 
 const buttons = {
-    variant: {
-        primary: {
-            backgroundColor: 'primary',
-        },
-        secondary: {
-            color: 'background',
-            backgroundColor: 'secondary',
-        },
-        ghost: {
-            color: 'muted',
-            backgroundColor: 'background',
-        },
+    primary: {
+        bg: 'primary',
+        color: 'white',
+        '&:hover': {
+            bg: darken(0.05, colors.primary)
+        }
+    },
+    secondary: {
+        bg: 'secondary',
+        color: 'white',
+        '&:hover': {
+            bg: darken(0.05, colors.secondary)
+        }
+    },
+    ghost: {
+        bg: 'transparent',
+        color: 'primary',
+        '&:hover': {
+            color: darken(0.05, colors.primary)
+        }
     },
     size: {
         sm: '100px',
         md: '200px',
+        lg: '300px',
+        fullWidth: '100%'
     }
-
 }
 
 // Global styles

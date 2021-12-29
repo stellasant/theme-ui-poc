@@ -7,7 +7,7 @@ interface ButtonProps extends ThemeUIButtonProps {
   children: React.ReactNode
 }
 
-/* Example of customized Theme-ui ready-made component by adding props and theme styles */
+/* Example of customized Theme-ui built-in component by adding props and theme styles */
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ isLoading, children, ...restProps }, ref) => {

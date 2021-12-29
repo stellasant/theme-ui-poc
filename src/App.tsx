@@ -7,8 +7,9 @@ export const App = () => {
     return (
         <ThemeProvider theme={defaultTheme}>
           {/*Add Project main content*/}
-          <Button variant='buttons.variant.primary' sx={{ size: 'buttons.size.sm'}}>Primary</Button>
-          <Button variant='buttons.variant.secondary' sx={{ size: 'buttons.size.md' }}>Secondary</Button>
+          <Button variant='primary' sx={{ size: 'buttons.size.sm'}}>Primary</Button>
+          <Button variant='secondary' sx={{ size: 'buttons.size.md' }}>Secondary</Button>
+          <Button variant='ghost' sx={{ size: 'buttons.size.md' }}>Ghost</Button>
         </ThemeProvider>
     )
 }
