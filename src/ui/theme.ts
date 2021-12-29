@@ -7,6 +7,7 @@ https://theme-ui.com/theming
 
 import { Theme } from 'theme-ui'
 import { darken } from 'polished'
+import { ButtonSize } from '../types/ui'
 
 // Replace them with
 
@@ -40,7 +41,7 @@ const lineHeights = {
 
 const radii = {
     sm: '12px',
-    md: '24px'
+    md: '24px',
 }
 
 const shadows = {
@@ -52,30 +53,33 @@ const buttons = {
     primary: {
         bg: 'primary',
         color: 'white',
-        '&:hover': {
-            bg: darken(0.05, colors.primary)
-        }
+        '&:hover, &:active': {
+            bg: darken(0.05, colors.primary),
+        },
     },
     secondary: {
         bg: 'secondary',
         color: 'white',
-        '&:hover': {
-            bg: darken(0.05, colors.secondary)
-        }
+        '&:hover, &:active': {
+            bg: darken(0.05, colors.secondary),
+        },
     },
     ghost: {
         bg: 'transparent',
         color: 'primary',
-        '&:hover': {
-            color: darken(0.05, colors.primary)
-        }
+        '&:hover, &:active': {
+            color: darken(0.05, colors.primary),
+        },
     },
-    size: {
+}
+
+const sizes = {
+    buttons: {
         sm: '100px',
         md: '200px',
         lg: '300px',
-        fullWidth: '100%'
-    }
+    } as { [key in ButtonSize]: string },
+    fullWidth: '100%',
 }
 
 // Global styles
@@ -163,5 +167,6 @@ export const defaultTheme: Theme = {
     shadows,
     radii,
     styles,
-    buttons
+    buttons,
+    sizes,
 }
