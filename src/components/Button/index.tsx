@@ -3,23 +3,17 @@ import { Box, Button as ThemeUIButton, ButtonProps as ThemeUIButtonProps } from 
 import { buttonStyle } from './styles'
 
 interface ButtonProps extends ThemeUIButtonProps {
-  isLoading?: boolean
-  children: React.ReactNode
+    isLoading?: boolean
+    children: React.ReactNode
 }
 
 /* Example of customized Theme-ui built-in component by adding props and theme styles */
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ isLoading, children, ...restProps }, ref) => {
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ isLoading, children, ...restProps }, ref) => {
     return (
-      <ThemeUIButton ref={ref} {...restProps} sx={buttonStyle}>
-        {isLoading && (
-          /* wip */
-          <Box
-          />
-        )}
-        {children}
-      </ThemeUIButton>
+        <ThemeUIButton ref={ref} {...restProps} sx={buttonStyle}>
+            {isLoading && <Box />}
+            {children}
+        </ThemeUIButton>
     )
-  }
-);
+})
