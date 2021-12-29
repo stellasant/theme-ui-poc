@@ -1,9 +1,10 @@
 import React, { forwardRef } from 'react'
 import { Button as ThemeUIButton, ButtonProps as ThemeUIButtonProps } from 'theme-ui'
-import { ButtonSize } from '../../types/ui'
 import { buttonStyle } from './styles'
 
-interface ButtonProps extends ThemeUIButtonProps, React.FC {
+export type ButtonSize = 'sm' | 'md' | 'lg'
+
+export interface ButtonProps extends ThemeUIButtonProps, React.FC {
     size?: ButtonSize
 }
 
