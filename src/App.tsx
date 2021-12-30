@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex, ThemeProvider } from 'theme-ui'
 import { defaultTheme } from './ui/theme'
-import { Button } from './components/Button'
+import { Button } from './components'
 
 export const App = () => {
     return (

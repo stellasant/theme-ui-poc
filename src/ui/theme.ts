@@ -7,7 +7,7 @@ https://theme-ui.com/theming
 
 import { Theme } from 'theme-ui'
 import { darken } from 'polished'
-import { ButtonSize } from '../types/ui'
+import { ButtonSize } from '../components'
 
 // Replace them with
 
