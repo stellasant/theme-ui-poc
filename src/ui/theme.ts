@@ -186,4 +186,3 @@ export const defaultTheme: Theme = {
     sizes,
     space,
 }
-export { colors, space }
