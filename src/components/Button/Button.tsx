@@ -1,20 +1,23 @@
 import React, { forwardRef } from 'react'
-import { Button as ThemeUIButton, ButtonProps as ThemeUIButtonProps } from 'theme-ui'
+import { Button as ThemeUIButton, ButtonProps } from 'theme-ui'
 import { buttonStyle } from './styles'
 
 export type ButtonSize = 'sm' | 'md' | 'lg'
 
-export interface ButtonProps extends ThemeUIButtonProps, React.FC {
+export interface IButtonProps extends ButtonProps, React.FC {
     size?: ButtonSize
+    icon?: React.ReactNode
+    onClick?: React.MouseEventHandler<any>
 }
 
 /* Example of customized Theme-ui built-in component by adding props and theme styles */
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ size = 'md', children, ...restProps }: ButtonProps, ref) => {
+export const Button = forwardRef<HTMLButtonElement, IButtonProps>(
+    ({ size = 'md', icon, children, onClick, ...restProps }: IButtonProps, ref) => {
         return (
-            <ThemeUIButton ref={ref} sx={buttonStyle({ size })} {...restProps}>
+            <ThemeUIButton ref={ref} onClick={onClick} sx={buttonStyle({ size })} {...restProps}>
                 {children}
+                {icon}
             </ThemeUIButton>
         )
     }

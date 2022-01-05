@@ -7,7 +7,8 @@ https://theme-ui.com/theming
 
 import { Theme } from 'theme-ui'
 import { darken } from 'polished'
-import { ButtonSize } from '../components'
+import { ButtonSize, IconButtonSize } from '../components'
+import { rem } from 'polished'
 
 // Replace them with
 
@@ -43,7 +44,7 @@ const radii = {
     sm: '12px',
     md: '24px',
 }
-
+const space = [0, 4, 8, 16, 32, 64, 128, 256, 512]
 const shadows = {
     small: '0 0 4px rgba(0, 0, 0, .125)',
     large: '0 0 24px rgba(0, 0, 0, .125)',
@@ -71,14 +72,28 @@ const buttons = {
             color: darken(0.05, colors.primary),
         },
     },
+    icon: {
+        cursor: 'pointer',
+        width: '25px',
+        height: '25px',
+        padding: '5px',
+        '& svg': {
+            width: rem('10px'),
+            height: rem('10px'),
+        },
+    },
 }
 
 const sizes = {
     buttons: {
-        sm: '100px',
+        sm: '150px',
         md: '200px',
         lg: '300px',
     } as { [key in ButtonSize]: string },
+    iconButtons: {
+        sm: '20px',
+        md: '25px',
+    } as { [key in IconButtonSize]: string },
     fullWidth: '100%',
 }
 
@@ -169,4 +184,5 @@ export const defaultTheme: Theme = {
     styles,
     buttons,
     sizes,
+    space,
 }
